@@ -1,0 +1,35 @@
+footer {
+  display: flex;
+  background-color: $color-white;
+  overflow: hidden;
+  padding: $space-small 0;
+  box-shadow: 0 0 5px $color-light-grey;
+
+  p {
+    margin: 0;
+  }
+
+  .logo {
+    margin: 0;
+    width: $logo-footer-width;
+    height: $logo-footer-height;
+    display: block;
+  }
+
+  .grid {
+    flex-wrap: wrap;
+
+    > * {
+      justify-content: center;
+      flex: 0 0 100%;
+
+      &:nth-child(1) {
+        order: 1;
+      }
+
+      &:last-child {
+        order: 2;
+      }
+    }
+  }
+}

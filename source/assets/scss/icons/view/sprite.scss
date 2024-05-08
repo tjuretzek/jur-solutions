@@ -1,0 +1,25 @@
+%svg-common {
+	background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.icon-email {
+	@extend %svg-common;
+	background-position: 0 0;
+	width: 20px;
+	height: 20px;
+}
+
+.icon-globe {
+	@extend %svg-common;
+	background-position: 100% 0;
+	width: 20px;
+	height: 20px;
+}
+
+.icon-phone {
+	@extend %svg-common;
+	background-position: 0 100%;
+	width: 20px;
+	height: 20px;
+}
+

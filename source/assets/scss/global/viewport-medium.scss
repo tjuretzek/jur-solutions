@@ -1,0 +1,60 @@
+// Medium up
+@media all and (min-width: $breakpoint-medium) {
+  .logo {
+    width: $logo-width;
+    height: $logo-height;
+    margin: 0 auto;
+  }
+
+  .logo-c {
+    padding: 0 0 0 rem-calc(80);
+  }
+
+  .cookie-free {
+    right: unset;
+    animation: unset;
+    left: 0;
+  }
+
+  main {
+    padding: 0 $space-default $space-xlarge;
+  }
+
+  footer {
+    padding: $space-small $space-default;
+
+    .grid {
+      flex-wrap: nowrap;
+
+      > * {
+        flex: 1 0 auto;
+        justify-content: inherit;
+
+        &:last-child {
+          justify-content: flex-end;
+          order: unset;
+        }
+
+        &:nth-child(1) {
+          order: unset;
+        }
+      }
+    }
+  }
+
+  .section-head {
+    span {
+      padding: 0 $space-default;
+    }
+
+    &:before {
+      left: 0;
+    }
+  }
+
+  .contact {
+    &.tel {
+      pointer-events: none;
+    }
+  }
+}

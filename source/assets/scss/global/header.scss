@@ -1,0 +1,27 @@
+header {
+  padding: $space-large 0 $space-xlarge;
+  position: relative;
+}
+
+.logo-c {
+  padding: 0;
+}
+
+.logo {
+  height: calc(#{$logo-height} /2);
+  width: calc(#{$logo-width} /2);
+  margin: 0;
+  display: block;
+}
+
+.cookie-free {
+  width: rem-calc(60);
+  height: rem-calc(95);
+  position: absolute;
+  background-image: url("/assets/images/cookie-free.svg");
+  top: -$space-large;
+  z-index: 1;
+  animation: fadeOut .5s 2s forwards;
+  left: unset;
+  right: 0;
+}

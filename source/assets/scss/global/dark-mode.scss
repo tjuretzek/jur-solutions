@@ -1,0 +1,70 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $color-darkmode-white;
+    color: $color-darkmode-black;
+  }
+
+  .bg {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(181, 235, 135, 0.2) 0%, rgba(28, 28, 28, 0) 100%);
+  }
+
+  .cookie-free {
+    background-image: url("/assets/images/cookie-free-darkmode.svg");
+  }
+
+
+  .logo,
+  .skills {
+    filter: invert(1);
+  }
+
+  .icon {
+    filter: brightness(0) invert(.8);
+  }
+
+  footer {
+    background-color: $color-darkmode-white;
+    box-shadow: 0 0 5px $color-darkmode-black;
+  }
+
+  .navigation {
+    > ul {
+      >li {
+        &:not(:last-child) {
+          border-color: $color-darkmode-black;
+        }
+      }
+    }
+  }
+
+  a {
+    color: $color-darkmode-link;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+      color: $color-darkmode-link-hover;
+    }
+  }
+
+  .section-head {
+    &:before {
+      border-color: $color-darkmode-main;
+    }
+
+    span {
+      background-color: $color-darkmode-white;
+    }
+  }
+
+  h1 {
+    color: $color-darkmode-main;
+  }
+
+  h2, h3, p {
+    strong {
+      color: $color-darkmode-main;
+    }
+  }
+}

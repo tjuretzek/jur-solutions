@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html amp lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script
+      async
+      custom-element="amp-install-serviceworker"
+      src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"
+    ></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="CONTENT-LANGUAGE" content="de-DE" />
+    <title>Jur Solutions GmbH - Tim Juretzek | Impressum</title>
+    <meta
+      name="description"
+      content="Angaben gemäß § 5 TMG und verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Jur Solutions GmbH Kontakt: Jur Solutions GmbH Geschäftsführung: Tim Juretzek | Gosepark 29 | 49594 Alfhausen | UStID: DE294411809"
+    />
+    <meta property="og:title" content="Jur Solutions GmbH - Tim Juretzek" />
+    <meta
+      property="og:description"
+      content="Jur Solutions GmbH - Tim Juretzek. IT-Dienstleister, Programmierer / Senior Frontend Entwickler auf Freelancer-Basis."
+    />
+    <meta
+      property="og:image"
+      content="https://jur.solutions/assets/images/banner-jur-solutions.jpg"
+    />
+    <meta property="og:url" content="https://jur.solutions/impressum" />
+    <meta property="og:type" content="Website" />
+    <meta
+      property="twitter:title"
+      content="Jur Solutions GmbH - Tim Juretzek"
+    />
+    <meta
+      property="twitter:description"
+      content="Jur Solutions GmbH - Tim Juretzek. IT-Dienstleister, Programmierer / Senior Frontend Entwickler auf Freelancer-Basis."
+    />
+    <meta
+      property="twitter:image"
+      content="https://jur.solutions/assets/images/banner-jur-solutions.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="msapplication-config"
+      content="/assets/images/favicon/browserconfig.xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/images/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/images/favicon/safari-pinned-tab.svg"
+      color="#4a0572"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/images/favicon/favicon.svg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#4a0572" />
+    <meta
+      name="msapplication-TileImage"
+      content="img/favicon/mstile-144x144.png"
+    />
+    <meta name="msapplication-config" content="img/favicon/ieconfig.xml" />
+    <meta name="application-name" content="Jur Solutions" />
+    <meta name="apple-mobile-web-app-title" content="Jur Solutions" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="robots" content="no-index, no-follow" />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/tim-juretzek-medium.webp"
+      imagesrcset="/assets/images/tim-juretzek-small.webp 720w, /assets/images/tim-juretzek-medium.webp 1000w, /assets/images/tim-juretzek.webp 1500w"
+      imagesizes="100vw"
+    />
+    <style amp-custom>
+      @-webkit-keyframes fadeOut {
+        0% {
+          opacity: 1;
+          z-index: 0;
+        }
+        to {
+          opacity: 0;
+          z-index: -1;
+        }
+      }
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+          z-index: 0;
+        }
+        to {
+          opacity: 0;
+          z-index: -1;
+        }
+      }
+      button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 0;
+        font-size: 1rem;
+        background: no-repeat 50%;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        color: #1c1c1c;
+      }
+      button:active,
+      button:focus,
+      button:hover {
+        outline: 0;
+        cursor: pointer;
+      }
+      footer {
+        display: flex;
+        background-color: #fff;
+        overflow: hidden;
+        padding: 0.625rem 0;
+        box-shadow: 0 0 5px #e3e3e3;
+      }
+      footer p {
+        margin: 0;
+      }
+      footer .logo {
+        margin: 0;
+        width: 2.6875rem;
+        height: 2.5rem;
+        display: block;
+      }
+      footer .grid {
+        flex-wrap: wrap;
+      }
+      footer .grid > * {
+        justify-content: center;
+        flex: 0 0 100%;
+      }
+      footer .grid > :first-child {
+        order: 1;
+      }
+      footer .grid > :last-child {
+        order: 2;
+      }
+      body {
+        font-family: Roboto, sans-serif;
+        display: flex;
+        flex: 1 1 100%;
+        flex-direction: column;
+        cursor: default;
+        color: #1c1c1c;
+      }
+      .bgc {
+        overflow: hidden;
+        height: 100vh;
+      }
+      .bg,
+      .bgc {
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .bg {
+        pointer-events: none;
+        height: 200vh;
+        mix-blend-mode: color;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(221, 0, 147, 0.2) 0,
+          rgba(255, 255, 255, 0) 100%
+        );
+        z-index: -1;
+        transform: translate3d(50vw, -110vh, 0);
+        max-width: 100vw;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      a {
+        color: #4a0572;
+        text-decoration: none;
+        transition: all 0.4s;
+        position: relative;
+      }
+      a.active,
+      a:active,
+      a:focus,
+      a:hover {
+        color: #dd0093;
+      }
+      .section-head {
+        width: auto;
+        margin: 2.5rem auto 1.25rem;
+        text-align: center;
+        position: relative;
+      }
+      .section-head span {
+        padding: 0 1.25rem;
+        position: relative;
+        background-color: #fff;
+        white-space: nowrap;
+        margin: 0 0 0 -0.625rem;
+      }
+      .section-head:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 1px;
+        width: 100%;
+        max-width: 64rem;
+        border-bottom: 1px solid #4a0572;
+        z-index: -1;
+      }
+      .disclaimer {
+        padding: 0.625rem 0 1.25rem;
+        opacity: 0.7;
+      }
+      .contact {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        margin: 0 0 1.25rem;
+      }
+      .contact .icon {
+        margin: 0 0.3125rem 0 0;
+      }
+      .row {
+        width: 100%;
+        max-width: 64rem;
+        margin: 0 auto;
+        padding: 0 0.625rem;
+        position: relative;
+      }
+      .grid {
+        width: calc(100% + 1.25rem);
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: -0.625rem;
+        padding: 0;
+      }
+      .grid > * {
+        max-width: calc(100% - 1.25rem);
+        flex-grow: 1;
+        margin: 0.625rem;
+      }
+      .grid > .shrink {
+        flex-grow: 0;
+        flex-shrink: 1;
+      }
+      .grid > .right {
+        justify-content: flex-end;
+        display: flex;
+      }
+      .grid > .middle {
+        align-items: center;
+        display: flex;
+      }
+      .grid > .center {
+        justify-content: center;
+        display: flex;
+      }
+      .grid > .vend {
+        align-items: flex-end;
+        display: flex;
+      }
+      header {
+        padding: 1.875rem 0 2.5rem;
+        position: relative;
+      }
+      .logo-c {
+        padding: 0;
+      }
+      .logo {
+        height: 1.875rem;
+        width: 9.375rem;
+        margin: 0;
+        display: block;
+      }
+      .cookie-free {
+        width: 3.75rem;
+        height: 5.9375rem;
+        position: absolute;
+        background-image: url(/assets/images/cookie-free.svg);
+        top: -1.875rem;
+        z-index: 1;
+        -webkit-animation: fadeOut 0.5s 2s forwards;
+        animation: fadeOut 0.5s 2s forwards;
+        left: unset;
+        right: 0;
+      }
+      .icon-email,
+      .icon-globe,
+      .icon-phone {
+        background: url(svg/sprite.view.svg) no-repeat;
+      }
+      .icon-email {
+        background-position: 0 0;
+        width: 20px;
+        height: 20px;
+      }
+      .icon-globe,
+      .icon-phone {
+        background-position: 100% 0;
+        width: 20px;
+        height: 20px;
+      }
+      .icon-phone {
+        background-position: 0 100%;
+      }
+      .icon,
+      .navigation > ul > li {
+        display: inline-block;
+      }
+      main {
+        min-height: calc(100vh - 10rem);
+        padding: 0 0 2.5rem;
+      }
+      .navigation {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        width: auto;
+      }
+      .navigation > ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .navigation > ul > li {
+        padding: 0 0.625rem;
+      }
+      .navigation > ul > li:not(:last-child) {
+        border-right: 1px solid #1c1c1c;
+      }
+      h1,
+      h2,
+      h3 {
+        font-weight: 300;
+      }
+      h1 {
+        color: #4a0572;
+        font-size: 2.375rem;
+        margin: 1.25rem 0 0.625rem;
+      }
+      h2,
+      h3 {
+        font-size: 1.5625rem;
+        margin: 2.5rem 0 1.25rem;
+      }
+      h3 {
+        font-size: 1.25rem;
+        margin: 1.875rem 0 1.25rem;
+      }
+      h2 strong,
+      h3 strong,
+      p strong {
+        font-weight: 300;
+        color: #4a0572;
+      }
+      p {
+        font-size: 1rem;
+        margin: 0.625rem 0 1.25rem;
+        line-height: 1.5rem;
+      }
+      p strong {
+        font-weight: 400;
+      }
+      p.large {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+      p.small {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+      @media (min-width: 45rem) {
+        .logo {
+          width: 18.75rem;
+          height: 3.75rem;
+          margin: 0 auto;
+        }
+        .logo-c {
+          padding: 0 0 0 5rem;
+        }
+        .cookie-free {
+          right: unset;
+          -webkit-animation: unset;
+          animation: unset;
+          left: 0;
+        }
+        main {
+          padding: 0 1.25rem 2.5rem;
+        }
+        footer {
+          padding: 0.625rem 1.25rem;
+        }
+        footer .grid {
+          flex-wrap: nowrap;
+        }
+        footer .grid > * {
+          flex: 1 0 auto;
+          justify-content: inherit;
+        }
+        footer .grid > :last-child {
+          justify-content: flex-end;
+          order: unset;
+        }
+        footer .grid > :first-child {
+          order: unset;
+        }
+        .section-head span {
+          padding: 0 1.25rem;
+        }
+        .section-head:before {
+          left: 0;
+        }
+        .contact.tel {
+          pointer-events: none;
+        }
+      }
+      @media (min-width: 64rem) {
+        a.link:not(.active):before {
+          content: "";
+          width: 0;
+          position: absolute;
+          height: 0.0625rem;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -0.0625rem;
+          transition: all 0.4s;
+          background-color: #4a0572;
+        }
+        a.link:not(.active):active:before,
+        a.link:not(.active):focus:before,
+        a.link:not(.active):hover:before {
+          width: 100%;
+          left: 0;
+          transform: translateX(0);
+          background-color: #dd0093;
+        }
+        .row {
+          padding: 0;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        a.link:not(.active):active:before,
+        a.link:not(.active):focus:before,
+        a.link:not(.active):hover:before {
+          background-color: #25da65;
+        }
+        body,
+        footer {
+          background-color: #1c1c1c;
+        }
+        body {
+          color: #e3e3e3;
+        }
+        .bg {
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(181, 235, 135, 0.2) 0,
+            rgba(28, 28, 28, 0) 100%
+          );
+        }
+        .cookie-free {
+          background-image: url(/assets/images/cookie-free-darkmode.svg);
+        }
+        .logo,
+        .skills {
+          filter: invert(1);
+        }
+        .icon {
+          filter: brightness(0) invert(0.8);
+        }
+        footer {
+          box-shadow: 0 0 5px #e3e3e3;
+        }
+        .navigation > ul > li:not(:last-child) {
+          border-color: #e3e3e3;
+        }
+        a,
+        h1,
+        h2 strong,
+        h3 strong,
+        p strong {
+          color: #b5eb87;
+        }
+        a.active,
+        a:active,
+        a:focus,
+        a:hover {
+          color: #25da65;
+        }
+        .section-head:before {
+          border-color: #b5eb87;
+        }
+        .section-head span {
+          background-color: #1c1c1c;
+        }
+      }
+      main {
+        margin: 1.875rem 0 0;
+      }
+    </style>
+    <link rel="canonical" href="https://jur.solutions/impressum" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript
+    >
+  </head>
+  <body>
+    <div class="bgc"><div class="bg"></div></div>
+    <div itemprop>
+      <header>
+        <div class="row">
+          <div class="grid">
+            <div class="cookie-free"></div>
+            <div
+              class="grow logo-c"
+              itemprop="worksFor"
+              itemscope
+              itemtype="https://schema.org/Organization"
+            >
+              <meta itemprop="legalName" content="Jur Solutions GmbH" /><meta
+                itemprop="email"
+                content="tim@jur.solutions"
+              /><meta
+                itemprop="telephone"
+                content="+49 (0)160 / 552 991 7"
+              /><span
+                itemscope
+                itemprop="founder"
+                itemtype="https://schema.org/Person"
+                ><meta itemprop="name" content="Tim Juretzek" /><meta
+                  itemprop="sameAs"
+                  content="https://jur.solutions/" /></span
+              ><span
+                itemscope
+                itemprop="address"
+                itemtype="https://schema.org/PostalAddress"
+                ><meta itemprop="streetAddress" content="Gosepark 29" /><meta
+                  itemprop="postalCode"
+                  content="49594" /><meta
+                  itemprop="addressLocality"
+                  content="Alfhausen" /><meta
+                  itemprop="addressCountry"
+                  content="DE" /></span
+              ><a
+                itemprop="url"
+                href="https://jur.solutions/"
+                class="logo"
+                title="Jur Solutions GmbH"
+                ><meta
+                  itemprop="logo"
+                  content="https://jur.solutions/assets/images/logo.svg" /><amp-img
+                  alt="Jur Solutions GmbH"
+                  width="300"
+                  height="60"
+                  layout="responsive"
+                  src="assets/images/logo.svg"
+                  ><amp-img
+                    alt="Jur Solutions GmbH"
+                    fallback
+                    width="300"
+                    height="60"
+                    layout="responsive"
+                    src="assets/images/logo.png"
+                  ></amp-img></amp-img
+              ></a>
+            </div>
+            <div class="shrink right middle">
+              <nav class="navigation">
+                <i class="icon icon-globe"></i>
+                <ul>
+                  <li>
+                    <a
+                      href="/"
+                      title="Jur Solutions GmbH - Deutsch"
+                      class="link"
+                      >DE</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/en"
+                      title="Jur Solutions GmbH - English"
+                      class="link"
+                      >EN</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <article>
+          <div class="row">
+            <div class="grid">
+              <h1>Impressum</h1>
+              <div class="row">
+                <div class="grid">
+                  <p>
+                    Angaben gemäß § 5 TMG und verantwortlich für den Inhalt nach
+                    § 55 Abs. 2 RStV: Jur Solutions GmbH
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="grid">
+              <section>
+                <h2 class="section-head"><span>Kontakt</span></h2>
+                <h3>Jur Solutions GmbH</h3>
+                <p>
+                  Geschäftsführung: Tim Juretzek<br />Gosepark 29<br />49594
+                  Alfhausen
+                </p>
+                <p>UStID: DE294411809</p>
+                <a href="tel:+491605529917" class="contact tel" title="Anrufen"
+                  ><i class="icon icon-phone"></i> 0160 / 552 991 7</a
+                >
+                <a
+                  href="mailto:tim@jur.solutions"
+                  class="contact"
+                  title="E-Mail schreiben"
+                  ><i class="icon icon-email"></i> tim@jur.solutions</a
+                >
+              </section>
+            </div>
+          </div>
+          <div class="row">
+            <div class="grid">
+              <section>
+                <h2 class="section-head"><span>Haftungsausschluss</span></h2>
+                <h3>Haftung für Inhalte</h3>
+                <p>
+                  Die Inhalte dieser Seiten wurden mit größter Sorgfalt
+                  erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität
+                  der Inhalte können wir jedoch keine Gewähr übernehmen. Als
+                  Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene
+                  Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
+                  verantwortlich. Nach §§ 8 bis 10 TMG sind wir als
+                  Diensteanbieter jedoch nicht verpflichtet, übermittelte oder
+                  gespeicherte fremde Informationen zu überwachen oder nach
+                  Umständen zu forschen, die auf eine rechtswidrige Tätigkeit
+                  hinweisen. Verpflichtungen zur Entfernung oder Sperrung der
+                  Nutzung von Informationen nach den allgemeinen Gesetzen
+                  bleiben hiervon unberührt. Eine diesbezügliche Haftung ist
+                  jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten
+                  Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden
+                  Rechtsverletzungen werden wir diese Inhalte umgehend
+                  entfernen.
+                </p>
+                <h3>Haftung für Links</h3>
+                <p>
+                  Unser Angebot enthält Links zu externen Webseiten Dritter, auf
+                  deren Inhalte wir keinen Einfluss haben. Deshalb können wir
+                  für diese fremden Inhalte auch keine Gewähr übernehmen. Für
+                  die Inhalte der verlinkten Seiten ist stets der jeweilige
+                  Anbieter oder Betreiber der Seiten verantwortlich. Die
+                  verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf
+                  mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren
+                  zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente
+                  inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne
+                  konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.
+                  Bei Bekanntwerden von Rechtsverletzungen werden wir derartige
+                  Links umgehend entfernen.
+                </p>
+                <h3>Urheberrecht</h3>
+                <p>
+                  Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
+                  diesen Seiten unterliegen dem deutschen Urheberrecht. Die
+                  Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
+                  Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen
+                  der schriftlichen Zustimmung des jeweiligen Autors bzw.
+                  Erstellers. Downloads und Kopien dieser Seite sind nur für den
+                  privaten, nicht kommerziellen Gebrauch gestattet. Soweit die
+                  Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden,
+                  werden die Urheberrechte Dritter beachtet. Insbesondere werden
+                  Inhalte Dritter als solche gekennzeichnet. Sollten Sie
+                  trotzdem auf eine Urheberrechtsverletzung aufmerksam werden,
+                  bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden
+                  von Rechtsverletzungen werden wir derartige Inhalte umgehend
+                  entfernen.
+                </p>
+                <h3>Datenschutz</h3>
+                <p>
+                  Die Nutzung dieser Webseite ist ohne Angabe personenbezogener
+                  Daten möglich. Der Nutzung von im Rahmen der Impressumspflicht
+                  veröffentlichten Kontaktdaten durch Dritte zur übersendung von
+                  nicht ausdrücklich angeforderter Werbung und
+                  Informationsmaterialien wird hiermit ausdrücklich
+                  widersprochen. Der Betreiber der Seite behält sich
+                  ausdrücklich rechtliche Schritte im Falle der unverlangten
+                  Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.
+                </p>
+              </section>
+            </div>
+          </div>
+        </article>
+      </main>
+      <section class="disclaimer" data-nosnippet="true">
+        <div class="row">
+          <div class="grid">
+            <div class="center">
+              <p class="small">
+                <strong>*COOKIE FREE:</strong> Diese Seite verzichtet auf den
+                Einsatz jeglicher Cookies oder Session Storages zur Speicherung
+                von Nutzerdaten.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <amp-install-serviceworker
+        src="/sw.js"
+        layout="nodisplay"
+        data-iframe-src="/install-service-worker.html"
+      ></amp-install-serviceworker>
+      <footer>
+        <div class="row">
+          <ul class="grid">
+            <li
+              class="middle"
+              itemprop="brand"
+              itemscope
+              itemtype="https://schema.org/Organization"
+            >
+              <meta itemprop="legalName" content="Jur Solutions GmbH" /><meta
+                itemprop="email"
+                content="tim@jur.solutions"
+              /><meta
+                itemprop="telephone"
+                content="+49 (0)160 / 552 991 7"
+              /><span
+                itemscope
+                itemprop="founder"
+                itemtype="https://schema.org/Person"
+                ><meta itemprop="name" content="Tim Juretzek" /><meta
+                  itemprop="sameAs"
+                  content="https://jur.solutions/" /></span
+              ><span
+                itemscope
+                itemprop="address"
+                itemtype="https://schema.org/PostalAddress"
+                ><meta itemprop="streetAddress" content="Gosepark 29" /><meta
+                  itemprop="postalCode"
+                  content="49594" /><meta
+                  itemprop="addressLocality"
+                  content="Alfhausen" /><meta
+                  itemprop="addressCountry"
+                  content="DE" /></span
+              ><a
+                itemprop="url"
+                href="https://jur.solutions/"
+                class="logo"
+                title="Jur Solutions GmbH"
+                ><meta
+                  itemprop="logo"
+                  content="https://jur.solutions/assets/images/logo-small.svg" /><amp-img
+                  width="43"
+                  height="40"
+                  layout="responsive"
+                  src="assets/images/logo-small.svg"
+                  alt="Jur Solutions GmbH"
+                ></amp-img
+              ></a>
+            </li>
+            <li class="middle center">
+              <a href="/impressum" title="Impressum" class="link active"
+                >Impressum</a
+              >
+            </li>
+            <li class="middle">&nbsp;</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

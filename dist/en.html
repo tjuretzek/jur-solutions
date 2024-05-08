@@ -1,0 +1,2602 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script
+      async
+      custom-element="amp-install-serviceworker"
+      src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"
+    ></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="CONTENT-LANGUAGE" content="en" />
+    <title>Jur Solutions GmbH - Tim Juretzek | English</title>
+    <meta
+      name="description"
+      content="Jur Solutions GmbH - Tim Juretzek. IT-Contractor, Developer / Senior Frontend Developer as a freelancer service."
+    />
+    <meta property="og:title" content="Jur Solutions GmbH - Tim Juretzek" />
+    <meta
+      property="og:description"
+      content="Jur Solutions GmbH - Tim Juretzek. IT-Dienstleister, Programmierer / Senior Frontend Entwickler auf Freelancer-Basis."
+    />
+    <meta
+      property="og:image"
+      content="https://jur.solutions/assets/images/banner-jur-solutions.jpg"
+    />
+    <meta property="og:url" content="https://jur.solutions/en" />
+    <meta property="og:type" content="Website" />
+    <meta
+      property="twitter:title"
+      content="Jur Solutions GmbH - Tim Juretzek"
+    />
+    <meta
+      property="twitter:description"
+      content="Jur Solutions GmbH - Tim Juretzek. IT-Dienstleister, Programmierer / Senior Frontend Entwickler auf Freelancer-Basis."
+    />
+    <meta
+      property="twitter:image"
+      content="https://jur.solutions/assets/images/banner-jur-solutions.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="msapplication-config"
+      content="/assets/images/favicon/browserconfig.xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/images/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/images/favicon/safari-pinned-tab.svg"
+      color="#4a0572"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/images/favicon/favicon.svg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#4a0572" />
+    <meta
+      name="msapplication-TileImage"
+      content="img/favicon/mstile-144x144.png"
+    />
+    <meta name="msapplication-config" content="img/favicon/ieconfig.xml" />
+    <meta name="application-name" content="Jur Solutions" />
+    <meta name="apple-mobile-web-app-title" content="Jur Solutions" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/images/tim-juretzek-medium.webp"
+      imagesrcset="/assets/images/tim-juretzek-small.webp 720w, /assets/images/tim-juretzek-medium.webp 1000w, /assets/images/tim-juretzek.webp 1500w"
+      imagesizes="100vw"
+    />
+    <style amp-custom>
+      @-webkit-keyframes fadeOut {
+        0% {
+          opacity: 1;
+          z-index: 0;
+        }
+        to {
+          opacity: 0;
+          z-index: -1;
+        }
+      }
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+          z-index: 0;
+        }
+        to {
+          opacity: 0;
+          z-index: -1;
+        }
+      }
+      button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 0;
+        font-size: 1rem;
+        background: no-repeat 50%;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        color: #1c1c1c;
+      }
+      button:active,
+      button:focus,
+      button:hover {
+        outline: 0;
+        cursor: pointer;
+      }
+      footer {
+        display: flex;
+        background-color: #fff;
+        overflow: hidden;
+        padding: 0.625rem 0;
+        box-shadow: 0 0 5px #e3e3e3;
+      }
+      footer p {
+        margin: 0;
+      }
+      footer .logo {
+        margin: 0;
+        width: 2.6875rem;
+        height: 2.5rem;
+        display: block;
+      }
+      footer .grid {
+        flex-wrap: wrap;
+      }
+      footer .grid > * {
+        justify-content: center;
+        flex: 0 0 100%;
+      }
+      footer .grid > :first-child {
+        order: 1;
+      }
+      footer .grid > :last-child {
+        order: 2;
+      }
+      body {
+        font-family: Roboto, sans-serif;
+        display: flex;
+        flex: 1 1 100%;
+        flex-direction: column;
+        cursor: default;
+        color: #1c1c1c;
+      }
+      .bgc {
+        overflow: hidden;
+        height: 100vh;
+      }
+      .bg,
+      .bgc {
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .bg {
+        pointer-events: none;
+        height: 200vh;
+        mix-blend-mode: color;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(221, 0, 147, 0.2) 0,
+          rgba(255, 255, 255, 0) 100%
+        );
+        z-index: -1;
+        transform: translate3d(50vw, -110vh, 0);
+        max-width: 100vw;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      a {
+        color: #4a0572;
+        text-decoration: none;
+        transition: all 0.4s;
+        position: relative;
+      }
+      a.active,
+      a:active,
+      a:focus,
+      a:hover {
+        color: #dd0093;
+      }
+      .section-head {
+        width: auto;
+        margin: 2.5rem auto 1.25rem;
+        text-align: center;
+        position: relative;
+      }
+      .section-head span {
+        padding: 0 1.25rem;
+        position: relative;
+        background-color: #fff;
+        white-space: nowrap;
+        margin: 0 0 0 -0.625rem;
+      }
+      .section-head:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 1px;
+        width: 100%;
+        max-width: 64rem;
+        border-bottom: 1px solid #4a0572;
+        z-index: -1;
+      }
+      .disclaimer {
+        padding: 0.625rem 0 1.25rem;
+        opacity: 0.7;
+      }
+      .contact {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        margin: 0 0 1.25rem;
+      }
+      .contact .icon {
+        margin: 0 0.3125rem 0 0;
+      }
+      .row {
+        width: 100%;
+        max-width: 64rem;
+        margin: 0 auto;
+        padding: 0 0.625rem;
+        position: relative;
+      }
+      .grid {
+        width: calc(100% + 1.25rem);
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: -0.625rem;
+        padding: 0;
+      }
+      .grid > * {
+        max-width: calc(100% - 1.25rem);
+        flex-grow: 1;
+        margin: 0.625rem;
+      }
+      .grid > .shrink {
+        flex-grow: 0;
+        flex-shrink: 1;
+      }
+      .grid > .right {
+        justify-content: flex-end;
+        display: flex;
+      }
+      .grid > .middle {
+        align-items: center;
+        display: flex;
+      }
+      .grid > .center {
+        justify-content: center;
+        display: flex;
+      }
+      .grid > .vend {
+        align-items: flex-end;
+        display: flex;
+      }
+      header {
+        padding: 1.875rem 0 2.5rem;
+        position: relative;
+      }
+      .logo-c {
+        padding: 0;
+      }
+      .logo {
+        height: 1.875rem;
+        width: 9.375rem;
+        margin: 0;
+        display: block;
+      }
+      .cookie-free {
+        width: 3.75rem;
+        height: 5.9375rem;
+        position: absolute;
+        background-image: url(/assets/images/cookie-free.svg);
+        top: -1.875rem;
+        z-index: 1;
+        -webkit-animation: fadeOut 0.5s 2s forwards;
+        animation: fadeOut 0.5s 2s forwards;
+        left: unset;
+        right: 0;
+      }
+      .icon-email,
+      .icon-globe,
+      .icon-phone {
+        background: url(svg/sprite.view.svg) no-repeat;
+      }
+      .icon-email {
+        background-position: 0 0;
+        width: 20px;
+        height: 20px;
+      }
+      .icon-globe,
+      .icon-phone {
+        background-position: 100% 0;
+        width: 20px;
+        height: 20px;
+      }
+      .icon-phone {
+        background-position: 0 100%;
+      }
+      .icon,
+      .navigation > ul > li {
+        display: inline-block;
+      }
+      main {
+        min-height: calc(100vh - 10rem);
+        padding: 0 0 2.5rem;
+      }
+      .navigation {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        width: auto;
+      }
+      .navigation > ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .navigation > ul > li {
+        padding: 0 0.625rem;
+      }
+      .navigation > ul > li:not(:last-child) {
+        border-right: 1px solid #1c1c1c;
+      }
+      h1,
+      h2,
+      h3 {
+        font-weight: 300;
+      }
+      h1 {
+        color: #4a0572;
+        font-size: 2.375rem;
+        margin: 1.25rem 0 0.625rem;
+      }
+      h2,
+      h3 {
+        font-size: 1.5625rem;
+        margin: 2.5rem 0 1.25rem;
+      }
+      h3 {
+        font-size: 1.25rem;
+        margin: 1.875rem 0 1.25rem;
+      }
+      h2 strong,
+      h3 strong,
+      p strong {
+        font-weight: 300;
+        color: #4a0572;
+      }
+      p {
+        font-size: 1rem;
+        margin: 0.625rem 0 1.25rem;
+        line-height: 1.5rem;
+      }
+      p strong {
+        font-weight: 400;
+      }
+      p.large {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+      p.small {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+      @media (min-width: 45rem) {
+        .logo {
+          width: 18.75rem;
+          height: 3.75rem;
+          margin: 0 auto;
+        }
+        .logo-c {
+          padding: 0 0 0 5rem;
+        }
+        .cookie-free {
+          right: unset;
+          -webkit-animation: unset;
+          animation: unset;
+          left: 0;
+        }
+        main {
+          padding: 0 1.25rem 2.5rem;
+        }
+        footer {
+          padding: 0.625rem 1.25rem;
+        }
+        footer .grid {
+          flex-wrap: nowrap;
+        }
+        footer .grid > * {
+          flex: 1 0 auto;
+          justify-content: inherit;
+        }
+        footer .grid > :last-child {
+          justify-content: flex-end;
+          order: unset;
+        }
+        footer .grid > :first-child {
+          order: unset;
+        }
+        .section-head span {
+          padding: 0 1.25rem;
+        }
+        .section-head:before {
+          left: 0;
+        }
+        .contact.tel {
+          pointer-events: none;
+        }
+      }
+      @media (min-width: 64rem) {
+        a.link:not(.active):before {
+          content: "";
+          width: 0;
+          position: absolute;
+          height: 0.0625rem;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -0.0625rem;
+          transition: all 0.4s;
+          background-color: #4a0572;
+        }
+        a.link:not(.active):active:before,
+        a.link:not(.active):focus:before,
+        a.link:not(.active):hover:before {
+          width: 100%;
+          left: 0;
+          transform: translateX(0);
+          background-color: #dd0093;
+        }
+        .row {
+          padding: 0;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        a.link:not(.active):active:before,
+        a.link:not(.active):focus:before,
+        a.link:not(.active):hover:before {
+          background-color: #25da65;
+        }
+        body,
+        footer {
+          background-color: #1c1c1c;
+        }
+        body {
+          color: #e3e3e3;
+        }
+        .bg {
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(181, 235, 135, 0.2) 0,
+            rgba(28, 28, 28, 0) 100%
+          );
+        }
+        .cookie-free {
+          background-image: url(/assets/images/cookie-free-darkmode.svg);
+        }
+        .logo,
+        .skills {
+          filter: invert(1);
+        }
+        .icon {
+          filter: brightness(0) invert(0.8);
+        }
+        footer {
+          box-shadow: 0 0 5px #e3e3e3;
+        }
+        .navigation > ul > li:not(:last-child) {
+          border-color: #e3e3e3;
+        }
+        a,
+        h1,
+        h2 strong,
+        h3 strong,
+        p strong {
+          color: #b5eb87;
+        }
+        a.active,
+        a:active,
+        a:focus,
+        a:hover {
+          color: #25da65;
+        }
+        .section-head:before {
+          border-color: #b5eb87;
+        }
+        .section-head span {
+          background-color: #1c1c1c;
+        }
+      }
+      .me {
+        width: 25rem;
+        height: auto;
+        max-width: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        display: block;
+      }
+      .card {
+        display: flex;
+        flex: 0 0 100%;
+        padding: 1.25rem;
+        box-shadow: 0 0 5px #e3e3e3;
+        justify-content: center;
+        border-radius: 0.3125rem;
+      }
+      .business-logo {
+        display: block;
+        height: 4.0625rem;
+        width: auto;
+      }
+      .chart {
+        display: flex;
+        flex: 0 0 100%;
+        justify-content: center;
+      }
+      .chart-container {
+        display: block;
+        width: 20rem;
+        height: 20rem;
+        position: relative;
+        margin: 0 auto;
+      }
+      .p-1,
+      .p-2 {
+        box-sizing: content-box;
+        transform: translate3d(-50%, 0, 0);
+        left: 50%;
+      }
+      .p-1 {
+        position: absolute;
+        border-style: solid;
+      }
+      .p-2 {
+        border-color: #fff transparent;
+      }
+      .p-2,
+      .p-3,
+      .p-4 {
+        position: absolute;
+        border-style: solid;
+      }
+      .p-3 {
+        box-sizing: content-box;
+        transform: translate3d(-50%, 0, 0);
+        left: 50%;
+      }
+      .p-4 {
+        border-color: #fff transparent;
+      }
+      .p-4,
+      .p-5 {
+        box-sizing: content-box;
+        transform: translate3d(-50%, 0, 0);
+        left: 50%;
+      }
+      .p-1:before,
+      .p-5,
+      .p-6 {
+        position: absolute;
+        border-style: solid;
+      }
+      .p-6 {
+        box-sizing: content-box;
+        border-color: #fff transparent;
+        transform: translate3d(-50%, 0, 0);
+        left: 50%;
+      }
+      .p-1:before {
+        content: "";
+        height: 0;
+        width: 0;
+      }
+      .p-2:before {
+        border-color: transparent transparent #fff;
+      }
+      .p-2:before,
+      .p-3:before {
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        border-style: solid;
+      }
+      .p-4:before {
+        border-color: transparent transparent #fff;
+      }
+      .p-4:before,
+      .p-5:before,
+      .p-6:before {
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        border-style: solid;
+      }
+      .p-6:before {
+        border-color: transparent transparent #fff;
+      }
+      .p-1,
+      .p-3,
+      .p-5 {
+        border-color: #e3e3e3 transparent;
+      }
+      .p-1:before,
+      .p-3:before,
+      .p-5:before {
+        border-color: transparent transparent #e3e3e3;
+      }
+      .p-1 {
+        top: 8.75rem;
+        width: 10rem;
+        border-width: 9.375rem 3.5rem 0;
+        z-index: 1;
+      }
+      .p-1:before,
+      .p-2:before {
+        top: -16.25rem;
+        left: -3.5rem;
+        border-width: 0 8.5rem 6.875rem;
+      }
+      .p-2 {
+        top: 8.875rem;
+        width: 9.875rem;
+        border-width: 9.125rem 3.375rem 0;
+        z-index: 2;
+      }
+      .p-2:before {
+        top: -16rem;
+        border-width: 0 8.4375rem 6.875rem;
+      }
+      .p-3 {
+        top: 9.75rem;
+        width: 6.625rem;
+        border-width: 6.25rem 2.3125rem 0;
+        z-index: 3;
+      }
+      .p-3:before {
+        top: -10.8125rem;
+        left: -2.3125rem;
+        border-width: 0 5.625rem 4.5625rem;
+      }
+      .p-4 {
+        top: 9.8125rem;
+        width: 6.5rem;
+        border-width: 6.0625rem 2.25rem 0;
+        z-index: 4;
+      }
+      .p-4:before {
+        top: -10.5625rem;
+        left: -2.25rem;
+        border-width: 0 5.5rem 4.5rem;
+      }
+      .p-5 {
+        top: 10.625rem;
+        width: 3.3125rem;
+        border-width: 3.125rem 1.1875rem 0;
+        z-index: 5;
+      }
+      .p-5:before {
+        top: -5.4375rem;
+        left: -1.1875rem;
+        border-width: 0 2.8125rem 2.3125rem;
+      }
+      .p-6 {
+        top: 10.6875rem;
+        width: 3.1875rem;
+        border-width: 2.9375rem 1.125rem 0;
+        z-index: 6;
+      }
+      .p-6:before {
+        top: -5.1875rem;
+        left: -1.125rem;
+        border-width: 0 2.6875rem 2.25rem;
+      }
+      .s-1,
+      .s-2,
+      .s-3,
+      .s-4,
+      .s-5 {
+        height: 2px;
+        position: absolute;
+        transform-origin: center;
+        background-color: #e3e3e3;
+        z-index: 7;
+      }
+      .s-1 {
+        width: 9.875rem;
+        transform: rotate(90deg);
+        top: 6.8125rem;
+        left: 5.0625rem;
+      }
+      .s-2 {
+        width: 8.9375rem;
+        transform: rotate(161deg);
+        top: 10.1875rem;
+        right: 1.375rem;
+      }
+      .s-3,
+      .s-4 {
+        width: 8.125rem;
+        top: 14.8125rem;
+      }
+      .s-3 {
+        right: 3.4375rem;
+        transform: rotate(232deg);
+      }
+      .s-4 {
+        transform: rotate(308deg);
+        left: 3.4375rem;
+      }
+      .s-5 {
+        width: 8.9375rem;
+        transform: rotate(19deg);
+        top: 10.1875rem;
+        left: 1.375rem;
+      }
+      .skills {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0.8;
+        display: block;
+        z-index: 8;
+      }
+      .coms,
+      .dev,
+      .pm,
+      .rely,
+      .team {
+        position: absolute;
+        z-index: 9;
+        text-transform: uppercase;
+        font-size: 0.625rem;
+        text-align: center;
+        line-height: 0.75rem;
+      }
+      .dev {
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      .pm {
+        right: -1.875rem;
+        top: 7.5rem;
+      }
+      .rely {
+        right: 1.875rem;
+      }
+      .coms,
+      .rely {
+        bottom: -0.625rem;
+      }
+      .coms {
+        left: 2.1875rem;
+      }
+      .team {
+        left: -1.5625rem;
+        top: 7.5rem;
+      }
+      .tech {
+        display: flex;
+        flex: 0 0 100%;
+        width: calc(100% + 1.25rem);
+        flex-wrap: wrap;
+        margin: 0.625rem 0;
+        max-width: 100%;
+      }
+      .tech-card,
+      .tech-link {
+        width: 100%;
+        display: block;
+      }
+      .tech-card {
+        height: 11.25rem;
+        background-color: #fff;
+        box-shadow: 0 0 5px #e3e3e3;
+        border-radius: 0.3125rem;
+        transition: box-shadow 2s;
+      }
+      .tech-link {
+        color: #1c1c1c;
+        outline: 0;
+      }
+      .tech-link:hover .tech-card {
+        box-shadow: 0 0 5px #4a0572;
+      }
+      .tech-logo {
+        height: 8.75rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .tech-name {
+        width: 100%;
+        height: 2.5rem;
+        line-height: 1.25rem;
+        padding: 0.625rem 0;
+        margin: 0;
+        border-top: 1px solid #e3e3e3;
+        text-align: center;
+      }
+      .tech-wrapper {
+        width: 50%;
+        padding: 0.625rem;
+        display: block;
+      }
+      @media (max-width: 23.75rem) {
+        .chart {
+          transform: scale(0.8);
+          width: 120%;
+          margin-left: -10%;
+        }
+        .tech {
+          margin: 0.625rem 0;
+        }
+        .tech-wrapper {
+          width: 100%;
+        }
+      }
+      @media (min-width: 45rem) {
+        .chart {
+          float: right;
+          display: block;
+        }
+        .chart .chart-container {
+          margin: 0 3.125rem 1.875rem;
+          transform: none;
+        }
+        .me {
+          margin: 2.5rem 2.5rem 1.875rem 0;
+          max-width: 25rem;
+          width: 40vw;
+          float: left;
+        }
+        .card {
+          flex: 0 0 calc(50% - 1.25rem);
+          width: calc(50% - 1.25rem);
+        }
+        .pm {
+          right: -3.125rem;
+          top: 7.5rem;
+        }
+        .team {
+          top: 7.5rem;
+          left: -1.875rem;
+        }
+        .tech-wrapper {
+          width: 25%;
+        }
+      }
+      @media (min-width: 64rem) {
+        .tech-wrapper {
+          width: 20%;
+        }
+        .card {
+          flex: 0 0 calc(33.33333% - 1.25rem);
+          width: calc(33.33333% - 1.25rem);
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        .card,
+        .tech-card {
+          background-color: #e3e3e3;
+          box-shadow: 0 0 5px #1c1c1c;
+        }
+        .tech-link:active,
+        .tech-link:focus,
+        .tech-link:hover {
+          color: #25da65;
+        }
+        .tech-link:active .tech-card,
+        .tech-link:focus .tech-card,
+        .tech-link:hover .tech-card {
+          box-shadow: 0 0 5px #b5eb87;
+        }
+        .tech-name {
+          border-color: #aaa;
+        }
+        .p-2,
+        .p-4,
+        .p-6 {
+          border-color: #1c1c1c transparent;
+        }
+        .p-2:before,
+        .p-4:before,
+        .p-6:before {
+          border-color: transparent transparent #1c1c1c;
+        }
+      }
+    </style>
+    <link rel="canonical" href="https://jur.solutions/en" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript
+    >
+  </head>
+  <body>
+    <div class="bgc"><div class="bg"></div></div>
+    <div itemscope itemtype="https://schema.org/Person">
+      <header>
+        <div class="row">
+          <div class="grid">
+            <div class="cookie-free"></div>
+            <div
+              class="grow logo-c"
+              itemprop="worksFor"
+              itemscope
+              itemtype="https://schema.org/Organization"
+            >
+              <meta itemprop="legalName" content="Jur Solutions GmbH" /><meta
+                itemprop="email"
+                content="tim@jur.solutions"
+              /><meta
+                itemprop="telephone"
+                content="+49 (0)160 / 552 991 7"
+              /><span
+                itemscope
+                itemprop="founder"
+                itemtype="https://schema.org/Person"
+                ><meta itemprop="name" content="Tim Juretzek" /><meta
+                  itemprop="sameAs"
+                  content="https://jur.solutions/" /></span
+              ><span
+                itemscope
+                itemprop="address"
+                itemtype="https://schema.org/PostalAddress"
+                ><meta itemprop="streetAddress" content="Gosepark 29" /><meta
+                  itemprop="postalCode"
+                  content="49594" /><meta
+                  itemprop="addressLocality"
+                  content="Alfhausen" /><meta
+                  itemprop="addressCountry"
+                  content="DE" /></span
+              ><a
+                itemprop="url"
+                href="https://jur.solutions/"
+                class="logo"
+                title="Jur Solutions GmbH"
+                ><meta
+                  itemprop="logo"
+                  content="https://jur.solutions/assets/images/logo.svg" /><amp-img
+                  alt="Jur Solutions GmbH"
+                  width="300"
+                  height="60"
+                  layout="responsive"
+                  src="assets/images/logo.svg"
+                  ><amp-img
+                    alt="Jur Solutions GmbH"
+                    fallback
+                    width="300"
+                    height="60"
+                    layout="responsive"
+                    src="assets/images/logo.png"
+                  ></amp-img></amp-img
+              ></a>
+            </div>
+            <div class="shrink right middle">
+              <nav class="navigation">
+                <i class="icon icon-globe"></i>
+                <ul>
+                  <li>
+                    <a
+                      href="/"
+                      title="Jur Solutions GmbH - Deutsch"
+                      class="link"
+                      >DE</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/en"
+                      title="Jur Solutions GmbH - English"
+                      class="link active"
+                      >EN</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <article>
+          <div class="row">
+            <div class="grid">
+              <section>
+                <div class="me">
+                  <meta
+                    itemprop="image"
+                    content="https://jur.solutions/assets/images/tim-juretzek.webp"
+                  /><amp-img
+                    width="400"
+                    height="400"
+                    layout="responsive"
+                    src="/assets/images/tim-juretzek.webp"
+                    alt="Tim Juretzek"
+                    srcset="/assets/images/tim-juretzek-small.webp 720w, /assets/images/tim-juretzek-medium.webp 1000w, /assets/images/tim-juretzek.webp 1500w"
+                    ><amp-img
+                      alt="Tim Juretzek"
+                      fallback
+                      width="400"
+                      height="400"
+                      layout="responsive"
+                      src="/assets/images/tim-juretzek.jpg"
+                      srcset="/assets/images/tim-juretzek-small.jpg 720w, /assets/images/tim-juretzek-medium.jpg 1000w,/assets/images/tim-juretzek.jpg 1500w"
+                    ></amp-img
+                  ></amp-img>
+                </div>
+                <h1>Hello,</h1>
+                <p class="large">
+                  my name is <strong itemprop="name">Tim Juretzek</strong>. I am
+                  the
+                  <span itemprop="description"
+                    ><strong>CEO and founder</strong> of
+                    Jur&nbsp;Solutions</span
+                  >. However, I am much more a <strong>programmer</strong>,
+                  <strong>project manager</strong>,
+                  <strong>consultant</strong> and
+                  <strong>problem solver</strong>.
+                </p>
+                <p class="large">
+                  On this page I introduce myself and give an overview of my
+                  previous projects, clients and services. Are you looking for
+                  an external and location-independent
+                  <strong>reinforcement</strong>? Then I could be exactly the
+                  right person for your project.
+                </p>
+                <p class="large">
+                  I saw the light of day in 1986 in the beautiful
+                  <strong itemprop="birthPlace"
+                    >Hanseatic city of Hamburg</strong
+                  >
+                  in the same hospital where my two daughters were later born.
+                  In 1990 my family moved to Bremen but in 2006 I returned to
+                  Hamburg. Today I live in the beautiful small village of
+                  Alfhausen.
+                </p>
+                <p class="large">
+                  I created my first websites at the age of fifteen. In 2010, at
+                  the age of twenty-four, I took the step into self-employment.
+                  I created the Jur&nbsp;Solutions three years later, in April
+                  2013.
+                </p>
+                <p class="large">
+                  During my <strong>20 years</strong> in the IT sector, the
+                  internet has changed a lot. Table layouts became responsive
+                  design, "Desktop Only" became "Mobile First" and Internet
+                  Explorer 6 got replaced by a variety of modern browsers.
+                </p>
+                <p class="large">
+                  I was able to experience these and many other exciting
+                  developments at first hand and so I evolved from junior to
+                  intermediate and finally
+                  <strong itemprop="jobTitle"
+                    >senior level frontend developer</strong
+                  >.
+                </p>
+                <span
+                  itemprop="nationality"
+                  itemscope
+                  itemtype="https://schema.org/Country"
+                  ><meta itemprop="name" content="Germany"
+                /></span>
+              </section>
+            </div>
+          </div>
+          <div class="row">
+            <div class="grid">
+              <section>
+                <h2 class="section-head"><span>Skills</span></h2>
+                <div class="row">
+                  <div class="grid">
+                    <div class="grow">
+                      <div class="chart">
+                        <div class="chart-container">
+                          <div class="p-1"></div>
+                          <div class="p-2"></div>
+                          <div class="p-3"></div>
+                          <div class="p-4"></div>
+                          <div class="p-5"></div>
+                          <div class="p-6"></div>
+                          <p class="dev">Expertise</p>
+                          <div class="s-1"></div>
+                          <p class="pm">Project<br />management</p>
+                          <div class="s-2"></div>
+                          <p class="rely">Reliability</p>
+                          <div class="s-3"></div>
+                          <p class="coms">Communication</p>
+                          <div class="s-4"></div>
+                          <p class="team">Team<br />capability</p>
+                          <div class="s-5"></div>
+                          <amp-img
+                            class="skills"
+                            width="320"
+                            height="320"
+                            src="/assets/images/chart.svg"
+                            layout="responsive"
+                            alt="Skills"
+                            ><amp-img
+                              alt="Skills"
+                              fallback
+                              class="skills"
+                              width="320"
+                              height="320"
+                              layout="responsive"
+                              src="/assets/images/chart.png"
+                            ></amp-img
+                          ></amp-img>
+                        </div>
+                      </div>
+                      <h3>Alone or in a team</h3>
+                      <p>
+                        Due to my versatile professional background, I worked in
+                        or led a wide variety of teams.
+                      </p>
+                      <p>
+                        I very much enjoy working with upstream
+                        <strong>project management</strong> , but if required I
+                        also bring a great deal of experience in taking
+                        <strong
+                          >project coordination and technical
+                          documentation</strong
+                        >
+                        into my own hands.
+                      </p>
+                      <p>
+                        Whether remotely or on site, alone or in a team: one of
+                        my demands on myself is that I always display a high
+                        degree of flexibility and always maintain active
+                        <strong>communication</strong> on the current project
+                        status.
+                        <strong>Independence and reliability</strong> are at
+                        least as important to me as smooth teamwork.
+                      </p>
+                      <p>
+                        <em
+                          >"A chain is always only as strong as its weakest
+                          link"</em
+                        >
+                        is not just an empty phrase, but plays an enormous role
+                        for me. I make my knowledge and
+                        <strong>expertise</strong> available to my entire team
+                        at all times.
+                      </p>
+                      <p>
+                        I consider it the greatest happiness that I was able to
+                        <strong>turn my passion into a profession</strong>. For
+                        me, the attraction of my work lies in the variety. I
+                        love to get to know <strong>new technologies</strong> or
+                        <strong>develop existing infrastructures</strong>. A
+                        certain portion of fearlessness and the certainty that
+                        almost anything can be realized on the web help me to
+                        quickly get into new projects and implement them to the
+                        satisfaction of all involved. That is why
+                        <strong
+                          >I have not let a deadline pass until today</strong
+                        >.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <h3>Frequently used tools & technologies</h3>
+                  <div class="grid">
+                    <div class="tech">
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://amp.dev/"
+                          target="_blank"
+                          title="AMP"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/amp.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="100"
+                                height="100"
+                                src="/assets/images/logos/amp.svg"
+                                alt="AMP"
+                                ><amp-img
+                                  fallback
+                                  alt="AMP"
+                                  class="tech-logo"
+                                  width="100"
+                                  height="100"
+                                  src="/assets/images/logos/amp.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">AMP</p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://craftcms.com/"
+                          target="_blank"
+                          title="Craft CMS"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/craft.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="120"
+                                height="36"
+                                src="/assets/images/logos/craft.svg"
+                                alt="Craft CMS"
+                                ><amp-img
+                                  fallback
+                                  alt="Craft CMS"
+                                  class="tech-logo"
+                                  width="120"
+                                  height="36"
+                                  src="/assets/images/logos/craft.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              Craft CMS
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                          target="_blank"
+                          title="CSS3"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/css3.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="72"
+                                height="100"
+                                src="/assets/images/logos/css3.svg"
+                                alt="CSS3"
+                                ><amp-img
+                                  fallback
+                                  alt="CSS3"
+                                  class="tech-logo"
+                                  width="72"
+                                  height="100"
+                                  src="/assets/images/logos/css3.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">CSS3</p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://developer.mozilla.org/en-US/docs/Web/HTML/HTML5"
+                          target="_blank"
+                          title="HTML5"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/html5.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="71"
+                                height="100"
+                                src="/assets/images/logos/html5.svg"
+                                alt="HTML5"
+                                ><amp-img
+                                  fallback
+                                  alt="HTML5"
+                                  class="tech-logo"
+                                  width="71"
+                                  height="100"
+                                  src="/assets/images/logos/html5.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">HTML5</p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                          target="_blank"
+                          title="Javascript"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/javascript.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="72"
+                                height="100"
+                                src="/assets/images/logos/javascript.svg"
+                                alt="Javascript"
+                                ><amp-img
+                                  fallback
+                                  alt="Javascript"
+                                  class="tech-logo"
+                                  width="72"
+                                  height="100"
+                                  src="/assets/images/logos/javascript.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              Javascript
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://greensock.com/"
+                          target="_blank"
+                          title="GreenSock"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/greensock.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="84"
+                                height="100"
+                                src="/assets/images/logos/greensock.svg"
+                                alt="GreenSock"
+                                ><amp-img
+                                  fallback
+                                  alt="GreenSock"
+                                  class="tech-logo"
+                                  width="84"
+                                  height="100"
+                                  src="/assets/images/logos/greensock.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              GreenSock
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://gulpjs.com/"
+                          target="_blank"
+                          title="Gulp.js"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/gulp.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="46"
+                                height="100"
+                                src="/assets/images/logos/gulp.svg"
+                                alt="Gulp.js"
+                                ><amp-img
+                                  fallback
+                                  alt="Gulp.js"
+                                  class="tech-logo"
+                                  width="46"
+                                  height="100"
+                                  src="/assets/images/logos/gulp.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              Gulp.js
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://jquery.com/"
+                          target="_blank"
+                          title="jQuery"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/jquery.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="95"
+                                height="100"
+                                src="/assets/images/logos/jquery.svg"
+                                alt="jQuery"
+                                ><amp-img
+                                  fallback
+                                  alt="jQuery"
+                                  class="tech-logo"
+                                  width="95"
+                                  height="100"
+                                  src="/assets/images/logos/jquery.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              jQuery
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://laravel.com/"
+                          target="_blank"
+                          title="Laravel"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/laravel.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="98"
+                                height="100"
+                                src="/assets/images/logos/laravel.svg"
+                                alt="Laravel"
+                                ><amp-img
+                                  fallback
+                                  alt="Laravel"
+                                  class="tech-logo"
+                                  width="98"
+                                  height="100"
+                                  src="/assets/images/logos/laravel.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              Laravel
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://nodejs.org/en/"
+                          target="_blank"
+                          title="Node.js"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/node-js.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="120"
+                                height="74"
+                                src="/assets/images/logos/node-js.svg"
+                                alt="Node.js"
+                                ><amp-img
+                                  fallback
+                                  alt="Node.js"
+                                  class="tech-logo"
+                                  width="120"
+                                  height="74"
+                                  src="/assets/images/logos/node-js.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              Node.js
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://www.php.net/"
+                          target="_blank"
+                          title="PHP"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/php.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="120"
+                                height="63"
+                                src="/assets/images/logos/php.svg"
+                                alt="PHP"
+                                ><amp-img
+                                  fallback
+                                  alt="PHP"
+                                  class="tech-logo"
+                                  width="120"
+                                  height="63"
+                                  src="/assets/images/logos/php.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">PHP</p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://www.plesk.com/"
+                          target="_blank"
+                          title="plesk"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/plesk.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="120"
+                                height="50"
+                                src="/assets/images/logos/plesk.svg"
+                                alt="PHP"
+                                ><amp-img
+                                  fallback
+                                  alt="PHP"
+                                  class="tech-logo"
+                                  width="120"
+                                  height="63"
+                                  src="/assets/images/logos/plesk.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">plesk</p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://en.wikipedia.org/wiki/Progressive_web_application"
+                          target="_blank"
+                          title="PWA"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/pwa.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="120"
+                                height="46"
+                                src="/assets/images/logos/pwa.svg"
+                                alt="PHP"
+                                ><amp-img
+                                  fallback
+                                  alt="PHP"
+                                  class="tech-logo"
+                                  width="120"
+                                  height="63"
+                                  src="/assets/images/logos/pwa.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              Progressive Web App
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://reactjs.org/"
+                          target="_blank"
+                          title="React"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/react.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="82"
+                                height="100"
+                                src="/assets/images/logos/react.svg"
+                                alt="React"
+                                ><amp-img
+                                  fallback
+                                  alt="React"
+                                  class="tech-logo"
+                                  width="82"
+                                  height="100"
+                                  src="/assets/images/logos/react.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">React</p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://sass-lang.com/"
+                          target="_blank"
+                          title="Sass"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/sass.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="120"
+                                height="90"
+                                src="/assets/images/logos/sass.svg"
+                                alt="Sass"
+                                ><amp-img
+                                  fallback
+                                  alt="Sass"
+                                  class="tech-logo"
+                                  width="120"
+                                  height="90"
+                                  src="/assets/images/logos/sass.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">Sass</p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://twig.symfony.com/"
+                          target="_blank"
+                          title="Twig"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/twig.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="62"
+                                height="100"
+                                src="/assets/images/logos/twig.svg"
+                                alt="Twig"
+                                ><amp-img
+                                  fallback
+                                  alt="Twig"
+                                  class="tech-logo"
+                                  width="36"
+                                  height="100"
+                                  src="/assets/images/logos/twig.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">Twig</p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://www.typescriptlang.org/"
+                          target="_blank"
+                          title="TypeScript"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/logos/images/typescript.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="100"
+                                height="100"
+                                src="/assets/images/logos/typescript.svg"
+                                alt="TypeScript"
+                                ><amp-img
+                                  fallback
+                                  alt="TypeScript"
+                                  class="tech-logo"
+                                  width="100"
+                                  height="100"
+                                  src="/assets/images/logos/typescript.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              TypeScript
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://vercel.com/"
+                          target="_blank"
+                          title="Vercel"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/logos/images/vercel.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="116"
+                                height="100"
+                                src="/assets/images/logos/vercel.svg"
+                                alt="Vercel"
+                                ><amp-img
+                                  fallback
+                                  alt="Vercel"
+                                  class="tech-logo"
+                                  width="116"
+                                  height="100"
+                                  src="/assets/images/logos/vercel.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              Vercel
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://vuejs.org/"
+                          target="_blank"
+                          title="vue.js"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/vue-js.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="116"
+                                height="100"
+                                src="/assets/images/logos/vue-js.svg"
+                                alt="vue.js"
+                                ><amp-img
+                                  fallback
+                                  alt="vue.js"
+                                  class="tech-logo"
+                                  width="116"
+                                  height="100"
+                                  src="/assets/images/logos/vue-js.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              vue.js
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://webpack.js.org/"
+                          target="_blank"
+                          title="webpack"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/webpack.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="90"
+                                height="100"
+                                src="/assets/images/logos/webpack.svg"
+                                alt="webpack"
+                                ><amp-img
+                                  fallback
+                                  alt="webpack"
+                                  class="tech-logo"
+                                  width="90"
+                                  height="100"
+                                  src="/assets/images/logos/webpack.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              webpack
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://wordpress.org/"
+                          target="_blank"
+                          title="Wordpress"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/wordpress.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="100"
+                                height="100"
+                                src="/assets/images/logos/wordpress.svg"
+                                alt="Wordpress"
+                                ><amp-img
+                                  fallback
+                                  alt="Wordpress"
+                                  class="tech-logo"
+                                  width="100"
+                                  height="100"
+                                  src="/assets/images/logos/wordpress.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              Wordpress
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                      <div
+                        class="tech-wrapper"
+                        itemprop="knowsAbout"
+                        itemscope
+                        itemtype="https://schema.org/Thing"
+                      >
+                        <a
+                          class="tech-link"
+                          itemprop="url"
+                          href="https://get.foundation/"
+                          target="_blank"
+                          title="ZURB Foundation"
+                          rel="noreferrer"
+                          ><div class="tech-card">
+                            <div class="tech-logo">
+                              <meta
+                                itemprop="image"
+                                content="https://jur.solutions/assets/images/logos/foundation.svg"
+                              /><amp-img
+                                class="tech-logo"
+                                width="70"
+                                height="100"
+                                src="/assets/images/logos/foundation.svg"
+                                alt="ZURB Foundation"
+                                ><amp-img
+                                  fallback
+                                  alt="ZURB Foundation"
+                                  class="tech-logo"
+                                  width="70"
+                                  height="100"
+                                  src="/assets/images/logos/foundation.png"
+                                ></amp-img
+                              ></amp-img>
+                            </div>
+                            <p class="tech-name small" itemprop="name">
+                              ZURB Foundation
+                            </p>
+                          </div></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <meta itemprop="knowsLanguage" content="de" /><meta
+                  itemprop="knowsLanguage"
+                  content="en"
+                />
+              </section>
+            </div>
+          </div>
+          <div class="row">
+            <div class="grid">
+              <section>
+                <h2 class="section-head"><span>The Company</span></h2>
+                <p>
+                  After the previous three years of solo self-employment I
+                  founded my company (Jur&nbsp;Solutions&nbsp;GmbH) in April
+                  2013. Since then I can use and offer the multiplicity of
+                  advantages, which a company brings with it.
+                </p>
+                <p>
+                  This company form allows clients to benefit from advantages
+                  that a solo self-employed person does not have. Even if I can
+                  work like a <strong>freelancer</strong>, a company is behind
+                  me.
+                </p>
+                <p>
+                  One of the biggest advantages is the possibility to conclude
+                  <strong>long-term service contracts</strong> with my clients.
+                  A classic freelancer may only make a maximum of 80% of his
+                  annual turnover through a single client per year, otherwise he
+                  goes into a bogus self-employment. There are
+                  <strong>no restrictions</strong>in this regard when working
+                  with me. A long period of employment for large projects can be
+                  realized without problems.
+                </p>
+                <p>
+                  By the company name I can, if necessary, flexibly and
+                  uncomplicatedly add
+                  <strong>further developers from my existing network</strong>
+                  to projects and conclude contracts independently without
+                  additional time or organizational expenditure for the client.
+                </p>
+                <p>
+                  Another advantage is the <strong>limited liability</strong> of
+                  the company. Dealing with large and/or sensitive data volumes
+                  requires a safety net in the form of insurance. Jur Solutions
+                  offers me and you protection from the biggest uncertainty
+                  factor in the IT industry: humans.
+                </p>
+              </section>
+            </div>
+          </div>
+          <div class="row">
+            <div class="grid">
+              <section>
+                <h2 class="section-head"><span>Clients</span></h2>
+                <div class="grid">
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="Commarco"
+                        width="200"
+                        height="65"
+                        src="/assets/images/logos/commarco.svg"
+                        ><amp-img
+                          fallback
+                          alt="Commarco"
+                          width="200"
+                          height="65"
+                          src="/assets/images/logos/commarco.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="deepblue Networks AG"
+                        width="200"
+                        height="65"
+                        src="/assets/images/logos/deepblue.svg"
+                        ><amp-img
+                          fallback
+                          alt="deepblue Networks AG"
+                          width="200"
+                          height="65"
+                          src="/assets/images/logos/deepblue.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="Stadt Herne"
+                        width="193"
+                        height="65"
+                        src="/assets/images/logos/herne.svg"
+                        ><amp-img
+                          fallback
+                          alt="Stadt Herne"
+                          width="193"
+                          height="65"
+                          src="/assets/images/logos/herne.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="Mabach GmbH & Co. KG"
+                        width="200"
+                        height="65"
+                        src="/assets/images/logos/mabach.svg"
+                        ><amp-img
+                          fallback
+                          alt="Mabach GmbH & Co. KG"
+                          width="200"
+                          height="65"
+                          src="/assets/images/logos/mabach.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="Schulamt für den Märkischen Kreis"
+                        width="195"
+                        height="65"
+                        src="/assets/images/logos/smk.svg"
+                        ><amp-img
+                          fallback
+                          alt="Schulamt für den Märkischen Kreis"
+                          width="195"
+                          height="65"
+                          src="/assets/images/logos/smk.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="statista GmbH"
+                        width="200"
+                        height="65"
+                        src="/assets/images/logos/statista.svg"
+                        ><amp-img
+                          fallback
+                          alt="statista GmbH"
+                          width="200"
+                          height="65"
+                          src="/assets/images/logos/statista.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="upljft GmbH"
+                        width="200"
+                        height="65"
+                        src="/assets/images/logos/upljft.svg"
+                        ><amp-img
+                          fallback
+                          alt="upljft GmbH"
+                          width="200"
+                          height="65"
+                          src="/assets/images/logos/upljft.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="row">
+            <div class="grid">
+              <section>
+                <h2 class="section-head"><span>Projects</span></h2>
+                <div class="grid">
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="Alnatura"
+                        width="133"
+                        height="65"
+                        src="/assets/images/logos/alnatura.svg"
+                        ><amp-img
+                          fallback
+                          alt="Alnatura"
+                          width="133"
+                          height="65"
+                          src="/assets/images/logos/alnatura.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="DEKRA Solutions"
+                        width="200"
+                        height="65"
+                        src="/assets/images/logos/dekra.svg"
+                        ><amp-img
+                          fallback
+                          alt="DEKRA Solutions"
+                          width="200"
+                          height="65"
+                          src="/assets/images/logos/dekra.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="Deutsche Messe AG"
+                        width="200"
+                        height="65"
+                        src="/assets/images/logos/dmag.svg"
+                        ><amp-img
+                          fallback
+                          alt="Deutsche Messe AG"
+                          width="200"
+                          height="65"
+                          src="/assets/images/logos/dmag.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="LIDL"
+                        width="65"
+                        height="65"
+                        src="/assets/images/logos/lidl.svg"
+                        ><amp-img
+                          fallback
+                          alt="LIDL"
+                          width="65"
+                          height="65"
+                          src="/assets/images/logos/lidl.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="Medion"
+                        width="198"
+                        height="65"
+                        src="/assets/images/logos/medion.svg"
+                        ><amp-img
+                          fallback
+                          alt="Medion"
+                          width="198"
+                          height="65"
+                          src="/assets/images/logos/medion.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="LOTTO Brandenburg"
+                        width="215"
+                        height="65"
+                        src="/assets/images/logos/lotto.svg"
+                        ><amp-img
+                          fallback
+                          alt="LOTTO Brandenburg"
+                          width="215"
+                          height="65"
+                          src="/assets/images/logos/lotto.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="Maastricht University"
+                        width="200"
+                        height="65"
+                        src="/assets/images/logos/maastricht-university.svg"
+                        ><amp-img
+                          fallback
+                          alt="Maastricht University"
+                          width="200"
+                          height="65"
+                          src="/assets/images/logos/maastricht-university.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="Mein-Monteurzimmer.de"
+                        width="155"
+                        height="65"
+                        src="/assets/images/logos/mmz.svg"
+                        ><amp-img
+                          fallback
+                          alt="Mein-Monteurzimmer.de"
+                          width="155"
+                          height="65"
+                          src="/assets/images/logos/mmz.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="Persil"
+                        width="196"
+                        height="65"
+                        src="/assets/images/logos/persil.svg"
+                        ><amp-img
+                          fallback
+                          alt="Persil"
+                          width="196"
+                          height="65"
+                          src="/assets/images/logos/persil.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="Playmobil"
+                        width="164"
+                        height="65"
+                        src="/assets/images/logos/playmobil.svg"
+                        ><amp-img
+                          fallback
+                          alt="Playmobil"
+                          width="164"
+                          height="65"
+                          src="/assets/images/logos/playmobil.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="business-logo">
+                      <amp-img
+                        alt="Schwarzkopf"
+                        width="152"
+                        height="65"
+                        src="/assets/images/logos/schwarzkopf.svg"
+                        ><amp-img
+                          fallback
+                          alt="Schwarzkopf"
+                          width="152"
+                          height="65"
+                          src="/assets/images/logos/schwarzkopf.png"
+                        ></amp-img
+                      ></amp-img>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="row">
+            <div class="grid">
+              <section>
+                <h2 class="section-head"><span>Contact</span></h2>
+                <p>
+                  For <strong>availability and project inquiries</strong>,
+                  please contact us at the following options:
+                </p>
+                <a href="tel:+491605529917" class="contact tel" title="call"
+                  ><i class="icon icon-phone"></i>
+                  <span itemprop="telephone">+49 (0)160 / 552 991 7</span></a
+                >
+                <a
+                  href="mailto:tim@jur.solutions"
+                  class="contact"
+                  title="Write email"
+                  ><i class="icon icon-email"></i>
+                  <span itemprop="email">tim@jur.solutions</span></a
+                >
+              </section>
+            </div>
+          </div>
+        </article>
+      </main>
+      <section class="disclaimer" data-nosnippet="true">
+        <div class="row">
+          <div class="grid">
+            <div class="center">
+              <p class="small">
+                <strong>*COOKIE FREE:</strong> This site does not use any
+                cookies or session storages to store user data.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <amp-install-serviceworker
+        src="/sw.js"
+        layout="nodisplay"
+        data-iframe-src="/install-service-worker.html"
+      ></amp-install-serviceworker>
+      <footer>
+        <div class="row">
+          <ul class="grid">
+            <li
+              class="middle"
+              itemprop="brand"
+              itemscope
+              itemtype="https://schema.org/Organization"
+            >
+              <meta itemprop="legalName" content="Jur Solutions GmbH" /><meta
+                itemprop="email"
+                content="tim@jur.solutions"
+              /><meta
+                itemprop="telephone"
+                content="+49 (0)160 / 552 991 7"
+              /><span
+                itemscope
+                itemprop="founder"
+                itemtype="https://schema.org/Person"
+                ><meta itemprop="name" content="Tim Juretzek" /><meta
+                  itemprop="sameAs"
+                  content="https://jur.solutions/" /></span
+              ><span
+                itemscope
+                itemprop="address"
+                itemtype="https://schema.org/PostalAddress"
+                ><meta itemprop="streetAddress" content="Gosepark 29" /><meta
+                  itemprop="postalCode"
+                  content="49594" /><meta
+                  itemprop="addressLocality"
+                  content="Alfhausen" /><meta
+                  itemprop="addressCountry"
+                  content="DE" /></span
+              ><a
+                itemprop="url"
+                href="https://jur.solutions/"
+                class="logo"
+                title="Jur Solutions GmbH"
+                ><meta
+                  itemprop="logo"
+                  content="https://jur.solutions/assets/images/logo-small.svg" /><amp-img
+                  width="43"
+                  height="40"
+                  layout="responsive"
+                  src="assets/images/logo-small.svg"
+                  alt="Jur Solutions GmbH"
+                ></amp-img
+              ></a>
+            </li>
+            <li class="middle center">
+              <a href="/impressum" title="Impressum" class="link">Impressum</a>
+            </li>
+            <li class="middle">&nbsp;</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

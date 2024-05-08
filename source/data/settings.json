@@ -1,0 +1,14 @@
+{
+  "fallback": {
+    "title": "Jur Solutions GmbH - Tim Juretzek",
+    "description": "Jur Solutions GmbH - Tim Juretzek. IT-Dienstleister, Programmierer / Senior Frontend Entwickler auf Freelancer-Basis.",
+    "preview": "/assets/images/banner-jur-solutions.jpg",
+    "url": "https://jur.solutions",
+    "lang": "de",
+    "lang-code": "de-DE",
+    "robots": "index, follow"
+  },
+  "favicon-color": "#4a0572",
+  "theme-color": "#FFFFFF",
+  "project-name": "Jur Solutions"
+}

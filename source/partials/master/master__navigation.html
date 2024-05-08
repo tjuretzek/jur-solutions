@@ -1,0 +1,80 @@
+<!--=== Header ===-->
+<header>
+  <div class="row">
+    <div class="grid">
+      <div class="cookie-free"></div>
+      <div
+        class="grow logo-c"
+        itemprop="worksFor"
+        itemscope
+        itemtype="https://schema.org/Organization"
+      >
+        <meta itemprop="legalName" content="Jur Solutions GmbH" />
+        <meta itemprop="email" content="tim@jur.solutions" />
+        <meta itemprop="telephone" content="+49 (0)160 / 552 991 7" />
+        <span itemscope itemprop="founder" itemtype="https://schema.org/Person">
+          <meta itemprop="name" content="Tim Juretzek" />
+          <meta itemprop="sameAs" content="{{home.url}}" />
+        </span>
+        <span
+          itemscope
+          itemprop="address"
+          itemtype="https://schema.org/PostalAddress"
+        >
+          <meta itemprop="streetAddress" content="Gosepark 29" />
+          <meta itemprop="postalCode" content="49594" />
+          <meta itemprop="addressLocality" content="Alfhausen" />
+          <meta itemprop="addressCountry" content="DE" />
+        </span>
+        <a
+          itemprop="url"
+          href="{{home.url}}"
+          class="logo"
+          title="{{home.title}}"
+        >
+          <meta itemprop="logo" content="{{home.url}}assets/images/logo.svg" />
+          <amp-img
+            alt="Jur Solutions GmbH"
+            width="300"
+            height="60"
+            layout="responsive"
+            src="assets/images/logo.svg"
+          >
+            <amp-img
+              alt="Jur Solutions GmbH"
+              fallback
+              width="300"
+              height="60"
+              layout="responsive"
+              src="assets/images/logo.png"
+            ></amp-img>
+          </amp-img>
+        </a>
+      </div>
+      <div class="shrink right middle">
+        <nav class="navigation">
+          <i class="icon icon-globe"></i>
+          <ul>
+            <li>
+              <a
+                href="/"
+                title="Jur Solutions GmbH - Deutsch"
+                class="link{{index}}"
+                >DE</a
+              >
+            </li>
+            <li>
+              <a
+                href="/en"
+                title="Jur Solutions GmbH - English"
+                class="link{{en}}"
+                >EN</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!--=== End Header ===-->
